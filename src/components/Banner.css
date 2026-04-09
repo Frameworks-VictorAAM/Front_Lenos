@@ -1,0 +1,59 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;            /* altura adaptable */
+  background-image: url("/src/assets/banner.png"); /* coloca tu imagen */
+  background-size: cover;      /* que cubra todo */
+  background-position: center; /* centrada */
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;         /* centrar contenido */
+  isolation: isolate;          /* para overlay */
+}
+
+.banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.55)
+  );                           /* oscurece para legibilidad */
+  z-index: -1;
+}
+
+.banner__content {
+  text-align: center;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  max-width: 900px;
+}
+
+.banner__title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.banner__subtitle {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.banner__cta {
+  display: inline-block;
+  background: #fffd92;
+  color: #0b1b1b;
+  font-weight: 700;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.banner__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}

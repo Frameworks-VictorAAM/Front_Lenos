@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FFD700;
+  --color-secondary: #E36800;
+
+
+  --container-center: true;
+  --container-padding: 2rem;
+}
+ @media (width >= 640px) {
+    /* sm */
+    --container-padding: 2rem;
+  }
+
+
+  @media (width >= 1024px) {
+    /* lg */
+    --container-padding: 4rem;
+  }
+
+
+  @media (width >= 1280px) {
+    /* xl */
+    --container-padding: 5rem;
+  }
