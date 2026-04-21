@@ -12,7 +12,7 @@ export default function MisPedidos() {
     try {
       const token = localStorage.getItem('x-auth-token');
       if (!token) return console.error("No hay token");
-      const res = await axios.get('https://localhost:8443/api/orders', {
+      const res = await axios.get('https://back-lenos.onrender.com/api/orders', {
         headers: { 'x-auth-token': token }
       });
       setPedidos(res.data);

@@ -19,7 +19,7 @@ export default function AdminPanel() {
   const guardarCambiosConfig = async () => {
   try {
     const token = localStorage.getItem('x-auth-token');
-    await axios.patch('https://localhost:8443/api/', 
+    await axios.patch('https://back-lenos.onrender.com/api/admin', 
       { ventaActiva, mensajeAdmin: mensajeHome }, // 'mensajeHome' es tu estado local del input
       { headers: { 'x-auth-token': token } }
     );

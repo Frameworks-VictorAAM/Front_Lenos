@@ -16,7 +16,7 @@ export default function Auth() {
     try {
       if (isLogin) {
         // --- LÓGICA DE LOGIN REAL ---
-        const res = await axios.post("https://localhost:8443/api/auth/login", {
+        const res = await axios.post("https://back-lenos.onrender.com/api/auth/login", {
           username,
           phone,
           password,
@@ -39,7 +39,7 @@ export default function Auth() {
 
       } else {
         // --- LÓGICA DE REGISTRO REAL ---
-        await axios.post("https://back-lenos.onrender.com", {
+        await axios.post("http://localhost:5000/api/auth/register", {
           username,
           phone,
           password,

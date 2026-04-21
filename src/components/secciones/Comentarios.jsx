@@ -8,7 +8,7 @@ export default function SeccionComentarios() {
   const enviarDatos = async (e) => {
   e.preventDefault();
   
-  const res = await fetch('https://localhost:8443/api/comentarios', {
+  const res = await fetch('https://back-lenos.onrender.com/api/comentarios', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     // AÑADIMOS 'puntuacion' (en este caso fija en 5, o puedes crear un estado para ella)
