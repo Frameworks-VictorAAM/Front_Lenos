@@ -9,6 +9,7 @@ import Carrito from './components/secciones/Carrito';
 import MisPedidos from './components/secciones/MisPedidos';
 import { CartProvider } from "./context/CartContext";
 import AdminPanel from './components/secciones/Admin';
+import SeccionComentarios from './components/secciones/Comentarios';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         </Routes>
       </BrowserRouter>
       </CartProvider>
+      <SeccionComentarios />
     </div>
   )
 }

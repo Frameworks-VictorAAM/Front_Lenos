@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const traerConfig = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/config');
+        const res = await axios.get('https://localhost:8443/api/config');
         setVentaActiva(res.data.ventaActiva);
         setMensajeAdmin(res.data.mensajeAdmin);
       } catch (error) {
