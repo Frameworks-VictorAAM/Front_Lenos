@@ -42,8 +42,8 @@ useEffect(() => {
 
       // Traemos productos y pedidos en paralelo
       const [resProductos, resPedidos] = await Promise.all([
-        axios.get('http://localhost:5000/api/products'), 
-        axios.get('http://localhost:5000/api/orders', headers)
+        axios.get('https://back-lenos.onrender.com//api/products'), 
+        axios.get('https://back-lenos.onrender.com//api/orders', headers)
       ]);
 
       setStock(resProductos.data);
@@ -61,7 +61,7 @@ useEffect(() => {
     const token = localStorage.getItem('x-auth-token');
     
     // Petición al backend
-    await axios.patch(`http://localhost:5000/api/products/${id}`, 
+    await axios.patch(`https://back-lenos.onrender.com/api/products/${id}`, 
       { stock: nuevaCantidad }, 
       { headers: { 'x-auth-token': token } }
     );
@@ -80,7 +80,7 @@ useEffect(() => {
   const cambiarEstadoPedido = async (id, nuevoEstado) => {
   try {
     const token = localStorage.getItem('x-auth-token');
-    const res = await axios.patch(`http://localhost:5000/api/orders/${id}`, 
+    const res = await axios.patch(`https://back-lenos.onrender.com/api/orders/${id}`, 
       { estado: nuevoEstado },
       { headers: { 'x-auth-token': token } }
     );
