@@ -39,7 +39,7 @@ export default function Auth() {
 
       } else {
         // --- LÓGICA DE REGISTRO REAL ---
-        await axios.post("http://localhost:5000/api/auth/register", {
+        await axios.post("https://back-lenos.onrender.com/api/auth/register", {
           username,
           phone,
           password,
