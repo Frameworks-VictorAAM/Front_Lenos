@@ -42,8 +42,8 @@ useEffect(() => {
 
       // Traemos productos y pedidos en paralelo
       const [resProductos, resPedidos] = await Promise.all([
-        axios.get('https://back-lenos.onrender.com//api/products'), 
-        axios.get('https://back-lenos.onrender.com//api/orders', headers)
+        axios.get('https://back-lenos.onrender.com/api/products'), 
+        axios.get('https://back-lenos.onrender.com/api/orders', headers)
       ]);
 
       setStock(resProductos.data);
